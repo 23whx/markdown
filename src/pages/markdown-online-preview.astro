@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import MarkdownEditor from '../components/MarkdownEditor';
+import { useTranslations, defaultLang, buildEditorTranslations } from '../i18n/utils';
+
+const lang = defaultLang;
+const t = useTranslations(lang);
+
+const editorTranslations = buildEditorTranslations(t);
+---
+
+<BaseLayout
+  title="Markdown Online Preview - Real-time Markdown Preview | Markdown Online"
+  description="Free online Markdown preview tool with real-time rendering. Preview your Markdown with syntax highlighting, tables, and task lists. No login required."
+  keywords="markdown online preview, markdown live preview, markdown preview tool, online markdown viewer"
+>
+  <section class="py-20 bg-gradient-to-b from-secondary to-white dark:from-gray-800 dark:to-gray-900">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          Markdown Online Preview
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
+          Real-time Markdown preview with syntax highlighting, tables, task lists, and more
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 bg-white dark:bg-gray-900">
+    <div class="container mx-auto px-4">
+      <MarkdownEditor client:load translations={editorTranslations} />
+    </div>
+  </section>
+
+  <section class="py-20 bg-gray-50 dark:bg-gray-800">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <div class="prose prose-lg dark:prose-invert max-w-none">
+        <h2>What is Markdown Online Preview?</h2>
+        <p>
+          <strong>Markdown Online Preview</strong> is a real-time tool that lets you see how your Markdown text will look when rendered. 
+          As you type, the preview pane instantly displays the formatted output, allowing you to verify formatting without saving or exporting.
+        </p>
+
+        <h3>Features of Our Markdown Live Preview</h3>
+        <ul>
+          <li><strong>Real-time Preview</strong>: See changes instantly as you type</li>
+          <li><strong>Split View</strong>: Edit on the left, preview on the right</li>
+          <li><strong>Syntax Highlighting</strong>: Code blocks with multi-language support</li>
+          <li><strong>Table Support</strong>: Perfect rendering of Markdown tables</li>
+          <li><strong>Task Lists</strong>: Preview Markdown checklists</li>
+          <li><strong>Dark Mode</strong>: Eye-friendly dark theme</li>
+          <li><strong>Responsive</strong>: Works on mobile, tablet, and desktop</li>
+        </ul>
+
+        <h3>Supported Markdown Syntax</h3>
+        <ul>
+          <li><strong>Headers</strong>: # H1, ## H2, ### H3, etc.</li>
+          <li><strong>Text Formatting</strong>: **bold**, *italic*, ~~strikethrough~~</li>
+          <li><strong>Lists</strong>: Ordered and unordered lists</li>
+          <li><strong>Links & Images</strong>: [text](url) and ![alt](image-url)</li>
+          <li><strong>Code</strong>: Inline `code` and code blocks</li>
+          <li><strong>Tables</strong>: Markdown table syntax</li>
+          <li><strong>Task Lists</strong>: - [ ] and - [x] checkboxes</li>
+          <li><strong>Blockquotes</strong>: > quoted text</li>
+        </ul>
+
+        <h3>How to Use Markdown Online Preview</h3>
+        <ol>
+          <li>Start typing or paste your Markdown content in the editor</li>
+          <li>Watch the preview pane update in real-time</li>
+          <li>Make adjustments and see instant results</li>
+          <li>Export to PDF, Word, HTML, or images when ready</li>
+        </ol>
+
+        <h3>Why Choose Our Markdown Preview Tool?</h3>
+        <ul>
+          <li><strong>100% Free</strong>: No payment, no subscription required</li>
+          <li><strong>Privacy-First</strong>: No data uploaded to servers</li>
+          <li><strong>No Login</strong>: Use immediately without signing up</li>
+          <li><strong>Auto-Save</strong>: Your work is automatically saved locally</li>
+          <li><strong>Multiple Exports</strong>: Export to various formats</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

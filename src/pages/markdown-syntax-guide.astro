@@ -1,0 +1,199 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const lang = 'en';
+---
+
+<BaseLayout
+  title="Markdown Syntax Guide - Complete Markdown Tutorial | Markdown Online"
+  description="Complete Markdown syntax guide with examples. Learn how to use headers, lists, tables, code blocks, task lists, and more. Perfect for beginners and advanced users."
+  keywords="markdown syntax, markdown tutorial, markdown guide, markdown tables, markdown code blocks, markdown checklist"
+>
+  <section class="py-20 bg-gradient-to-b from-secondary to-white dark:from-gray-800 dark:to-gray-900">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          Markdown Syntax Guide
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
+          Complete Markdown syntax tutorial from basics to advanced features
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-white dark:bg-gray-900">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <div class="prose prose-lg dark:prose-invert max-w-none">
+        <h2>What is Markdown?</h2>
+        <p>
+          <strong>Markdown</strong> is a lightweight markup language created by John Gruber in 2004. 
+          It uses simple plain text formatting syntax that can be easily converted to HTML and other formats. 
+          Markdown is widely used for technical documentation, blog writing, README files, and more.
+        </p>
+
+        <h2>Basic Syntax</h2>
+
+        <h3>1. Headers</h3>
+        <p>Use # symbols to create headers. The number of # symbols indicates the header level:</p>
+        <pre><code># H1 Header
+## H2 Header
+### H3 Header
+#### H4 Header
+##### H5 Header
+###### H6 Header</code></pre>
+
+        <h3>2. Text Formatting</h3>
+        <p><strong>Markdown syntax</strong> supports various text formats:</p>
+        <pre><code>**Bold text**
+*Italic text*
+***Bold and italic***
+~~Strikethrough text~~</code></pre>
+
+        <h3>3. Lists</h3>
+        <p><strong>Unordered lists</strong>:</p>
+        <pre><code>- Item 1
+- Item 2
+  - Sub-item 2.1
+  - Sub-item 2.2
+- Item 3</code></pre>
+
+        <p><strong>Ordered lists</strong>:</p>
+        <pre><code>1. First item
+2. Second item
+3. Third item</code></pre>
+
+        <h3>4. Links and Images</h3>
+        <p><strong>Links</strong>:</p>
+        <pre><code>[Link text](https://example.com)
+[Link with title](https://example.com "Link title")</code></pre>
+
+        <p><strong>Images</strong>:</p>
+        <pre><code>![Image alt text](image-url.jpg)
+![Image with title](image-url.jpg "Image title")</code></pre>
+
+        <h3>5. Blockquotes</h3>
+        <pre><code>> This is a blockquote
+> It can span multiple lines
+>
+> > Nested blockquote</code></pre>
+
+        <h3>6. Code</h3>
+        <p><strong>Inline code</strong>:</p>
+        <pre><code>Use `code` for inline code</code></pre>
+
+        <p><strong>Code blocks</strong>:</p>
+        <pre><code>function hello() &#123;
+  console.log("Hello, World!");
+&#125;
+</code></pre>
+
+        <h2>Extended Syntax</h2>
+
+        <h3>7. Markdown Tables</h3>
+        <p><strong>Markdown tables</strong> are one of the most commonly used extended features:</p>
+        <pre><code>| Column 1 | Column 2 | Column 3 |
+|----------|----------|----------|
+| Content 1 | Content 2 | Content 3 |
+| Content 4 | Content 5 | Content 6 |</code></pre>
+
+        <p><strong>Alignment</strong>:</p>
+        <pre><code>| Left Align | Center Align | Right Align |
+|:-----------|:------------:|------------:|
+| Left | Center | Right |</code></pre>
+
+        <h3>8. Task Lists (Markdown Checklist)</h3>
+        <p><strong>Markdown task lists</strong> are perfect for to-do items:</p>
+        <pre><code>- [x] Completed task
+- [ ] Incomplete task
+- [ ] Another to-do
+  - [x] Sub-task 1
+  - [ ] Sub-task 2</code></pre>
+
+        <h3>9. Footnotes</h3>
+        <pre><code>Here's a sentence with a footnote[^1].
+
+[^1]: This is the footnote content.</code></pre>
+
+        <h3>10. Horizontal Rules</h3>
+        <pre><code>---
+***
+___</code></pre>
+
+        <h3>11. Escaping Characters</h3>
+        <p>Use backslash \ to escape special characters:</p>
+        <pre><code>\*Not italic\*
+\# Not a header</code></pre>
+
+        <h2>GitHub Flavored Markdown (GFM)</h2>
+        
+        <h3>Automatic Links</h3>
+        <p>URLs and email addresses automatically convert to links:</p>
+        <pre><code>https://example.com
+user@example.com</code></pre>
+
+        <h3>Strikethrough</h3>
+        <pre><code>~~Deleted text~~</code></pre>
+
+        <h3>Emoji</h3>
+        <pre><code>:smile: :heart: :thumbsup:</code></pre>
+
+        <h2>Best Practices</h2>
+
+        <h3>1. Document Structure</h3>
+        <ul>
+          <li>Use clear heading hierarchy, don't skip levels</li>
+          <li>Use H1 for document title, typically only one</li>
+          <li>Organize information with lists and tables</li>
+        </ul>
+
+        <h3>2. Code Blocks</h3>
+        <ul>
+          <li>Always specify language for proper syntax highlighting</li>
+          <li>Use inline code for short snippets or commands</li>
+          <li>Use code blocks for multi-line code or complete examples</li>
+        </ul>
+
+        <h3>3. Markdown Tables</h3>
+        <ul>
+          <li>Keep tables simple, avoid too many columns</li>
+          <li>Use alignment to improve readability</li>
+          <li>Consider HTML or other formats for complex tables</li>
+        </ul>
+
+        <h2>Common Markdown Editors</h2>
+        <ul>
+          <li><strong>Online Editors</strong>: Markdown Online (this site), Dillinger, StackEdit</li>
+          <li><strong>Desktop Editors</strong>: Typora, Mark Text, Visual Studio Code</li>
+          <li><strong>Mobile</strong>: iA Writer, Bear (iOS), Markor (Android)</li>
+        </ul>
+
+        <h2>Markdown Use Cases</h2>
+        <ul>
+          <li><strong>Technical Documentation</strong>: API docs, user manuals, specifications</li>
+          <li><strong>Blog Writing</strong>: Static blogs (Jekyll, Hugo, Hexo)</li>
+          <li><strong>GitHub/GitLab</strong>: README.md, Issues, Pull Requests, Wikis</li>
+          <li><strong>Note-taking Apps</strong>: Notion, Obsidian, Joplin</li>
+          <li><strong>Forums</strong>: Reddit, Stack Overflow, Discord</li>
+          <li><strong>Presentations</strong>: Reveal.js, Marp</li>
+        </ul>
+
+        <h2>Learning Resources</h2>
+        <ul>
+          <li><a href="https://www.markdownguide.org/" target="_blank" rel="noopener">Markdown Guide</a> - Official guide</li>
+          <li><a href="https://github.github.com/gfm/" target="_blank" rel="noopener">GitHub Flavored Markdown Spec</a> - GFM specification</li>
+          <li><a href="https://commonmark.org/" target="_blank" rel="noopener">CommonMark</a> - Markdown standardization</li>
+        </ul>
+
+        <h2>Start Using Markdown Now</h2>
+        <p>
+          Now that you understand <strong>Markdown syntax</strong>, you can start creating with our
+          <a href="/">Markdown Online Editor</a>. It supports real-time preview, 
+          <strong>Markdown to PDF</strong>, <strong>Markdown to Word</strong>, and more features 
+          to help you efficiently complete your documentation.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

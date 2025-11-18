@@ -1,0 +1,117 @@
+---
+import { getLangFromUrl, useTranslations, getLocalizedPath } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<footer class="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 mt-20">
+  <div class="container mx-auto px-4 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <!-- Brand -->
+      <div class="col-span-1 md:col-span-2">
+        <div class="flex items-center space-x-2 mb-4">
+          <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+          </svg>
+          <span class="text-xl font-bold text-gray-900 dark:text-white">Markdown Online</span>
+        </div>
+        <p class="text-gray-600 dark:text-gray-400 mb-4">
+          {lang === 'zh' && 'Markdown 在线预览编辑器 - 支持转 PDF、Word、HTML、图片'}
+          {lang === 'en' && 'Online Markdown Editor & Live Preview - Export to PDF, Word, HTML, Image'}
+          {lang === 'ja' && 'Markdown オンラインエディタ & プレビュー - PDF、Word、HTML、画像に変換'}
+          {lang === 'ko' && '마크다운 온라인 편집기 & 프리뷰 - PDF, Word, HTML, 이미지로 변환'}
+        </p>
+        <p class="text-sm text-gray-500 dark:text-gray-500">
+          {t('footer.copyright')}
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="font-semibold text-gray-900 dark:text-white mb-4">
+          {lang === 'zh' && '快速链接'}
+          {lang === 'en' && 'Quick Links'}
+          {lang === 'ja' && 'クイックリンク'}
+          {lang === 'ko' && '빠른 링크'}
+        </h3>
+        <ul class="space-y-2">
+          <li>
+            <a href={getLocalizedPath(lang, '/markdown-online-preview')} class="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
+              {t('nav.preview')}
+            </a>
+          </li>
+          <li>
+            <a href={getLocalizedPath(lang, '/markdown-to-pdf')} class="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
+              {t('nav.toPdf')}
+            </a>
+          </li>
+          <li>
+            <a href={getLocalizedPath(lang, '/markdown-to-word')} class="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
+              {t('nav.toWord')}
+            </a>
+          </li>
+          <li>
+            <a href={getLocalizedPath(lang, '/markdown-syntax-guide')} class="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
+              {t('nav.docs')}
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h3 class="font-semibold text-gray-900 dark:text-white mb-4">
+          {t('footer.contact')}
+        </h3>
+        <ul class="space-y-2">
+          <li>
+            <a href="mailto:wanghongxiang23@gmail.com" class="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors flex items-center">
+              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+              Email
+            </a>
+          </li>
+          <li>
+            <a href="https://x.com/Rollkey4" target="_blank" rel="noopener noreferrer" class="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors flex items-center">
+              <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+              </svg>
+              @Rollkey4
+            </a>
+          </li>
+          <li>
+            <a href="https://oumashu.top" target="_blank" rel="noopener noreferrer" class="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors flex items-center">
+              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+              </svg>
+              oumashu.top
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <p class="text-sm text-gray-500 dark:text-gray-500 mb-4 md:mb-0">
+          {lang === 'zh' && '纯前端运行 · 无需登录 · 数据仅保留在本地'}
+          {lang === 'en' && 'Pure Frontend · No Login Required · Data Stays Local'}
+          {lang === 'ja' && 'フロントエンド専用 · ログイン不要 · データはローカルに保存'}
+          {lang === 'ko' && '순수 프론트엔드 · 로그인 불필요 · 데이터는 로컬에 저장'}
+        </p>
+        <div class="flex space-x-4">
+          <a href={getLocalizedPath(lang, '/about')} class="text-sm text-gray-500 dark:text-gray-500 hover:text-primary transition-colors">
+            {t('footer.about')}
+          </a>
+          <a href={getLocalizedPath(lang, '/privacy')} class="text-sm text-gray-500 dark:text-gray-500 hover:text-primary transition-colors">
+            {t('footer.privacy')}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+

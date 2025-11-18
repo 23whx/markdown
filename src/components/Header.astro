@@ -1,0 +1,118 @@
+---
+import { languages, getLangFromUrl, useTranslations, getLocalizedPath, type Language } from '../i18n/utils';
+import { Languages } from 'lucide-react';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<header class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 sticky top-0 z-50">
+  <nav class="container mx-auto px-4 py-4">
+    <div class="flex items-center justify-between">
+      <!-- Logo -->
+      <a href={getLocalizedPath(lang)} class="flex items-center space-x-2">
+        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+        </svg>
+        <span class="text-xl font-bold text-gray-900 dark:text-white">Markdown Online</span>
+      </a>
+
+      <!-- Navigation Links -->
+      <div class="hidden md:flex items-center space-x-6">
+        <a href={getLocalizedPath(lang)} class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">
+          {t('nav.home')}
+        </a>
+        <a href={getLocalizedPath(lang, '/markdown-online-preview')} class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">
+          {t('nav.preview')}
+        </a>
+        <a href={getLocalizedPath(lang, '/markdown-to-pdf')} class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">
+          {t('nav.toPdf')}
+        </a>
+        <a href={getLocalizedPath(lang, '/markdown-to-word')} class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">
+          {t('nav.toWord')}
+        </a>
+        <a href={getLocalizedPath(lang, '/markdown-to-image')} class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">
+          {t('nav.toImage')}
+        </a>
+        <a href={getLocalizedPath(lang, '/markdown-syntax-guide')} class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">
+          {t('nav.docs')}
+        </a>
+      </div>
+
+      <!-- Language Switcher & Dark Mode -->
+      <div class="flex items-center space-x-4">
+        <!-- Language Dropdown -->
+        <div class="relative group">
+          <button class="flex items-center space-x-1 text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path>
+            </svg>
+            <span class="hidden md:inline">{t('nav.language')}</span>
+          </button>
+          <div class="absolute right-0 mt-2 w-40 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            {Object.entries(languages).map(([code, name]) => (
+              <a
+                href={getLocalizedPath(code as Language, Astro.url.pathname.replace(/^\/(en|zh|ja|ko)/, ''))}
+                class={`block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 first:rounded-t-lg last:rounded-b-lg ${
+                  lang === code ? 'text-primary font-semibold' : 'text-gray-700 dark:text-gray-300'
+                }`}
+              >
+                {name}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <!-- Dark Mode Toggle -->
+        <button id="theme-toggle" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors" aria-label="Toggle dark mode">
+          <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+          </svg>
+          <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  // Dark mode toggle
+  const themeToggle = document.getElementById('theme-toggle');
+  const darkIcon = document.getElementById('theme-toggle-dark-icon');
+  const lightIcon = document.getElementById('theme-toggle-light-icon');
+
+  // Check for saved theme preference or default to system preference
+  const theme = (() => {
+    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+      return localStorage.getItem('theme');
+    }
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return 'dark';
+    }
+    return 'light';
+  })();
+
+  if (theme === 'dark') {
+    document.documentElement.classList.add('dark');
+    lightIcon?.classList.remove('hidden');
+  } else {
+    darkIcon?.classList.remove('hidden');
+  }
+
+  themeToggle?.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark');
+    
+    if (document.documentElement.classList.contains('dark')) {
+      localStorage.setItem('theme', 'dark');
+      darkIcon?.classList.add('hidden');
+      lightIcon?.classList.remove('hidden');
+    } else {
+      localStorage.setItem('theme', 'light');
+      darkIcon?.classList.remove('hidden');
+      lightIcon?.classList.add('hidden');
+    }
+  });
+</script>
+

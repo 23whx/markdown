@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import MarkdownEditor from '../components/MarkdownEditor';
+import { useTranslations, defaultLang, buildEditorTranslations } from '../i18n/utils';
+
+const lang = defaultLang;
+const t = useTranslations(lang);
+
+const editorTranslations = buildEditorTranslations(t);
+---
+
+<BaseLayout
+  title="Markdown to Word - Convert Markdown to DOCX Online | Markdown Online"
+  description="Free online Markdown to Word converter. Convert your Markdown documents to .docx format instantly. No login required, runs fully in your browser."
+  keywords="markdown to word, convert markdown to word, markdown docx export, markdown to docx converter"
+>
+  <section class="py-20 bg-gradient-to-b from-secondary to-white dark:from-gray-800 dark:to-gray-900">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          Markdown to Word Converter
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
+          Convert your Markdown documents to Microsoft Word (.docx) format with perfect formatting
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 bg-white dark:bg-gray-900">
+    <div class="container mx-auto px-4">
+      <MarkdownEditor client:load translations={editorTranslations} />
+    </div>
+  </section>
+
+  <section class="py-20 bg-gray-50 dark:bg-gray-800">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <div class="prose prose-lg dark:prose-invert max-w-none">
+        <h2>How to Convert Markdown to Word</h2>
+        <p>
+          Converting <strong>Markdown to Word</strong> is quick and easy:
+        </p>
+        <ol>
+          <li>Type or paste your Markdown content in the editor</li>
+          <li>Preview the formatted output</li>
+          <li>Click "Export" and select "Export as Word"</li>
+          <li>Download your .docx file and open it in Microsoft Word or any compatible software</li>
+        </ol>
+
+        <h3>Why Use Our Markdown to Word Converter?</h3>
+        <ul>
+          <li><strong>Standard Format</strong>: Creates .docx files compatible with Word, WPS, LibreOffice</li>
+          <li><strong>Editable Output</strong>: Generated documents can be further edited</li>
+          <li><strong>Format Preservation</strong>: Maintains headings, bold, italic, lists, and more</li>
+          <li><strong>Privacy-First</strong>: No server uploads, everything processes locally</li>
+          <li><strong>No Login Required</strong>: Use immediately without registration</li>
+        </ul>
+
+        <h3>Use Cases for Markdown to Word</h3>
+        <ul>
+          <li><strong>Academic Papers</strong>: Write in Markdown, convert to Word for submission</li>
+          <li><strong>Business Reports</strong>: Draft reports in Markdown, share as Word documents</li>
+          <li><strong>Resumes</strong>: Create resumes in Markdown, convert to Word for job applications</li>
+          <li><strong>Documentation</strong>: Convert technical docs to Word for team collaboration</li>
+        </ul>
+
+        <h3>Supported Formatting</h3>
+        <ul>
+          <li>Headings (H1-H6) convert to Word heading styles</li>
+          <li>Bold, italic, and text formatting</li>
+          <li>Ordered and unordered lists</li>
+          <li>Hyperlinks</li>
+          <li>Paragraphs and line breaks</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

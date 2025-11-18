@@ -1,0 +1,87 @@
+{
+  "site": {
+    "title": "Markdown 在线预览编辑器 | Markdown 转 PDF/Word/HTML/JPG - Markdown Online",
+    "description": "Markdown Online 是一款无需登录的在线 Markdown 编辑器，支持 Markdown 在线预览、Markdown 语法高亮，并一键将 Markdown 转换为 HTML、PDF、JPG/PNG、Word。纯前端运行，更安全更快捷。",
+    "keywords": "markdown在线预览, markdown编辑器, markdown转pdf, markdown转word, markdown转html, markdown转图片, markdown语法, markdown表格"
+  },
+  "nav": {
+    "home": "首页",
+    "preview": "在线预览",
+    "toPdf": "转 PDF",
+    "toWord": "转 Word",
+    "toImage": "转图片",
+    "docs": "文档",
+    "language": "语言"
+  },
+  "hero": {
+    "title": "Markdown 在线预览编辑器",
+    "subtitle": "支持转 PDF、Word、HTML、图片",
+    "description": "免费的在线 Markdown 编辑器，实时预览。无需登录，纯前端运行，安全快捷。",
+    "cta": "开始编辑"
+  },
+  "features": {
+    "title": "功能特色",
+    "livePreview": {
+      "title": "Markdown 在线预览",
+      "description": "实时预览，支持代码高亮、表格、任务列表等扩展语法。"
+    },
+    "toPdf": {
+      "title": "Markdown 转 PDF",
+      "description": "将 Markdown 文档导出为 PDF，支持自定义样式。"
+    },
+    "toWord": {
+      "title": "Markdown 转 Word",
+      "description": "一键将 Markdown 转换为 Word 文档 (.docx)。"
+    },
+    "toHtml": {
+      "title": "Markdown 转 HTML",
+      "description": "从 Markdown 内容生成干净的 HTML 代码。"
+    },
+    "toImage": {
+      "title": "Markdown 转图片",
+      "description": "将 Markdown 导出为 JPG/PNG 图片，方便分享。"
+    },
+    "noLogin": {
+      "title": "无需登录",
+      "description": "纯前端应用，数据仅保留在您的浏览器中。"
+    },
+    "multiLanguage": {
+      "title": "多语言支持",
+      "description": "支持中文、英文、日文、韩文界面。"
+    },
+    "syntax": {
+      "title": "Markdown 语法",
+      "description": "完整支持标准和扩展 Markdown 语法。"
+    }
+  },
+  "editor": {
+    "placeholder": "在这里输入您的 Markdown 内容...",
+    "wordCount": "字数",
+    "charCount": "字符",
+    "readingTime": "分钟阅读",
+    "export": "导出",
+    "download": "下载",
+    "copy": "复制",
+    "clear": "清空",
+    "template": "模板",
+    "darkMode": "暗色模式",
+    "lightMode": "浅色模式"
+  },
+  "export": {
+    "title": "导出选项",
+    "html": "导出为 HTML",
+    "pdf": "导出为 PDF",
+    "word": "导出为 Word",
+    "jpg": "导出为 JPG",
+    "png": "导出为 PNG",
+    "success": "导出成功！",
+    "error": "导出失败，请重试。"
+  },
+  "footer": {
+    "copyright": "© Markdown Online",
+    "contact": "联系我们",
+    "privacy": "隐私政策",
+    "about": "关于"
+  }
+}
+

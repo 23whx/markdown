@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import MarkdownEditor from '../components/MarkdownEditor';
+import { useTranslations, defaultLang, buildEditorTranslations } from '../i18n/utils';
+
+const lang = defaultLang;
+const t = useTranslations(lang);
+
+const editorTranslations = buildEditorTranslations(t);
+---
+
+<BaseLayout
+  title="Markdown to Image - Convert Markdown to PNG/JPG Online | Markdown Online"
+  description="Free online Markdown to Image converter. Convert your Markdown documents to PNG or JPG images instantly. No login required, runs fully in your browser."
+  keywords="markdown to image, markdown to png, markdown to jpg, convert markdown to image, markdown image export, markdown screenshot"
+>
+  <section class="py-20 bg-gradient-to-b from-secondary to-white dark:from-gray-800 dark:to-gray-900">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          Markdown to Image Converter
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
+          Convert your Markdown documents to PNG or JPG images for easy sharing
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 bg-white dark:bg-gray-900">
+    <div class="container mx-auto px-4">
+      <MarkdownEditor client:load translations={editorTranslations} />
+    </div>
+  </section>
+
+  <section class="py-20 bg-gray-50 dark:bg-gray-800">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <div class="prose prose-lg dark:prose-invert max-w-none">
+        <h2>How to Convert Markdown to Image</h2>
+        <p>
+          Converting <strong>Markdown to Image</strong> with our tool is simple and straightforward:
+        </p>
+        <ol>
+          <li>Type or paste your Markdown content in the editor</li>
+          <li>Preview the rendered output in real-time</li>
+          <li>Click the "Export" button and select "Export as PNG" or "Export as JPG"</li>
+          <li>Download your image file instantly</li>
+        </ol>
+
+        <h3>Why Use Our Markdown to Image Converter?</h3>
+        <ul>
+          <li><strong>Multiple Formats</strong>: Export to PNG or JPG format based on your needs</li>
+          <li><strong>High Quality</strong>: Generate high-resolution images perfect for sharing</li>
+          <li><strong>Privacy First</strong>: All conversion happens in your browser</li>
+          <li><strong>Free & Fast</strong>: No registration required, instant conversion</li>
+        </ul>
+
+        <h3>Best Use Cases for Markdown to Image</h3>
+        <p>
+          Our <strong>Markdown to PNG</strong> and <strong>Markdown to JPG</strong> converter is perfect for:
+        </p>
+        <ul>
+          <li><strong>Social Media</strong>: Share your content as images on Twitter, LinkedIn, Instagram</li>
+          <li><strong>Documentation</strong>: Create visual snippets of documentation</li>
+          <li><strong>Presentations</strong>: Include markdown content as images in slides</li>
+          <li><strong>Email</strong>: Share formatted content via email as images</li>
+          <li><strong>Archiving</strong>: Save snapshots of your markdown content</li>
+        </ul>
+
+        <h3>PNG vs JPG: Which Format to Choose?</h3>
+        <ul>
+          <li><strong>PNG</strong>: Best for text-heavy content, sharp edges, and when you need transparency support. Larger file size but higher quality.</li>
+          <li><strong>JPG</strong>: Better for content with many colors or photos. Smaller file size but slightly lower quality for text.</li>
+        </ul>
+
+        <h3>Features of Our Markdown Image Converter</h3>
+        <ul>
+          <li>Real-time preview before exporting</li>
+          <li>Support for all standard Markdown syntax</li>
+          <li>Code syntax highlighting in exported images</li>
+          <li>Markdown tables rendered beautifully</li>
+          <li>Dark mode support in preview</li>
+          <li>No watermarks or branding on exported images</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

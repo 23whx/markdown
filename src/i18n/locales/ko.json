@@ -1,0 +1,87 @@
+{
+  "site": {
+    "title": "마크다운 온라인 편집기 & 프리뷰 | Markdown PDF/Word/HTML/이미지 변환",
+    "description": "Markdown Online은 로그인이 필요 없는 빠르고 안전한 마크다운 편집기입니다. 온라인에서 마크다운을 편집하고 HTML, PDF, JPG/PNG, Word로 내보낼 수 있습니다. 완전히 브라우저에서 실행됩니다.",
+    "keywords": "마크다운 온라인 프리뷰, 마크다운 편집기, markdown pdf 변환, markdown word 변환, markdown html 변환"
+  },
+  "nav": {
+    "home": "홈",
+    "preview": "라이브 프리뷰",
+    "toPdf": "PDF로 변환",
+    "toWord": "Word로 변환",
+    "toImage": "이미지로 변환",
+    "docs": "문서",
+    "language": "언어"
+  },
+  "hero": {
+    "title": "마크다운 온라인 편집기 & 프리뷰",
+    "subtitle": "Markdown을 PDF, Word, HTML, 이미지로 변환",
+    "description": "무료 마크다운 온라인 편집기. 로그인 불필요, 완전히 클라이언트 측에서 실행, 안전하고 빠릅니다.",
+    "cta": "편집 시작"
+  },
+  "features": {
+    "title": "기능",
+    "livePreview": {
+      "title": "마크다운 라이브 프리뷰",
+      "description": "구문 강조, 표, 작업 목록 등이 포함된 실시간 프리뷰."
+    },
+    "toPdf": {
+      "title": "Markdown PDF 변환",
+      "description": "사용자 정의 스타일로 마크다운 문서를 PDF로 내보내기."
+    },
+    "toWord": {
+      "title": "Markdown Word 변환",
+      "description": "클릭 한 번으로 마크다운을 Word 문서(.docx)로 변환."
+    },
+    "toHtml": {
+      "title": "Markdown HTML 변환",
+      "description": "마크다운 콘텐츠에서 깨끗한 HTML 생성."
+    },
+    "toImage": {
+      "title": "Markdown 이미지 변환",
+      "description": "마크다운을 JPG/PNG 이미지로 내보내어 공유."
+    },
+    "noLogin": {
+      "title": "로그인 불필요",
+      "description": "순수 프론트엔드 애플리케이션. 데이터는 브라우저에 저장됩니다."
+    },
+    "multiLanguage": {
+      "title": "다국어 지원",
+      "description": "영어, 중국어, 일본어, 한국어 지원."
+    },
+    "syntax": {
+      "title": "마크다운 구문",
+      "description": "표준 및 확장 마크다운 구문 완전 지원."
+    }
+  },
+  "editor": {
+    "placeholder": "여기에 마크다운을 입력하세요...",
+    "wordCount": "단어",
+    "charCount": "문자",
+    "readingTime": "분 읽기",
+    "export": "내보내기",
+    "download": "다운로드",
+    "copy": "복사",
+    "clear": "지우기",
+    "template": "템플릿",
+    "darkMode": "다크 모드",
+    "lightMode": "라이트 모드"
+  },
+  "export": {
+    "title": "내보내기 옵션",
+    "html": "HTML로 내보내기",
+    "pdf": "PDF로 내보내기",
+    "word": "Word로 내보내기",
+    "jpg": "JPG로 내보내기",
+    "png": "PNG로 내보내기",
+    "success": "내보내기 성공!",
+    "error": "내보내기 실패. 다시 시도해주세요."
+  },
+  "footer": {
+    "copyright": "© Markdown Online",
+    "contact": "연락처",
+    "privacy": "개인정보 보호",
+    "about": "소개"
+  }
+}
+

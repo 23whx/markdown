@@ -1,0 +1,150 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import MarkdownEditor from '../components/MarkdownEditor';
+import { useTranslations, defaultLang, buildEditorTranslations } from '../i18n/utils';
+import { FileText, Zap, Shield, Globe, Download, Eye } from 'lucide-react';
+
+const lang = defaultLang;
+const t = useTranslations(lang);
+
+const editorTranslations = buildEditorTranslations(t);
+---
+
+<BaseLayout
+  title={t('site.title')}
+  description={t('site.description')}
+  keywords={t('site.keywords')}
+>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-b from-secondary to-white dark:from-gray-800 dark:to-gray-900 py-20">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+        {t('hero.title')}
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-4">
+        {t('hero.subtitle')}
+      </p>
+      <p class="text-lg text-gray-500 dark:text-gray-400 mb-8 max-w-3xl mx-auto">
+        {t('hero.description')}
+      </p>
+      <a href="#editor" class="btn-primary inline-flex items-center space-x-2 text-lg px-8 py-4">
+        <FileText className="w-5 h-5" />
+        <span>{t('hero.cta')}</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-20 bg-white dark:bg-gray-900">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">
+        {t('features.title')}
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Live Preview -->
+        <div class="bg-secondary dark:bg-gray-800 p-6 rounded-lg">
+          <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+            <Eye className="w-6 h-6 text-white" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+            {t('features.livePreview.title')}
+          </h3>
+          <p class="text-gray-600 dark:text-gray-400">
+            {t('features.livePreview.description')}
+          </p>
+        </div>
+
+        <!-- To PDF -->
+        <div class="bg-secondary dark:bg-gray-800 p-6 rounded-lg">
+          <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+            <FileText className="w-6 h-6 text-white" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+            {t('features.toPdf.title')}
+          </h3>
+          <p class="text-gray-600 dark:text-gray-400">
+            {t('features.toPdf.description')}
+          </p>
+        </div>
+
+        <!-- To Word -->
+        <div class="bg-secondary dark:bg-gray-800 p-6 rounded-lg">
+          <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+            <Download className="w-6 h-6 text-white" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+            {t('features.toWord.title')}
+          </h3>
+          <p class="text-gray-600 dark:text-gray-400">
+            {t('features.toWord.description')}
+          </p>
+        </div>
+
+        <!-- No Login -->
+        <div class="bg-secondary dark:bg-gray-800 p-6 rounded-lg">
+          <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+            <Shield className="w-6 h-6 text-white" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+            {t('features.noLogin.title')}
+          </h3>
+          <p class="text-gray-600 dark:text-gray-400">
+            {t('features.noLogin.description')}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Editor Section -->
+  <section id="editor" class="py-20 bg-gray-50 dark:bg-gray-800">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">
+        Try Markdown Editor Online
+      </h2>
+      <MarkdownEditor client:load translations={editorTranslations} />
+    </div>
+  </section>
+
+  <!-- SEO Content Section -->
+  <section class="py-20 bg-white dark:bg-gray-900">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <div class="prose prose-lg dark:prose-invert max-w-none">
+        <h2>About Markdown Online Editor</h2>
+        <p>
+          <strong>Markdown Online</strong> is a powerful, free online markdown editor with live preview functionality. 
+          Whether you need to <strong>edit markdown online</strong>, <strong>convert markdown to PDF</strong>, 
+          <strong>markdown to Word</strong>, <strong>markdown to HTML</strong>, or <strong>markdown to images</strong>, 
+          our tool has you covered.
+        </p>
+
+        <h3>Why Choose Our Markdown Editor?</h3>
+        <p>
+          Our <strong>markdown live preview</strong> tool runs entirely in your browser, ensuring your data remains 
+          private and secure. No login required, no data uploaded to servers – just pure, fast markdown editing 
+          with instant preview.
+        </p>
+
+        <h3>Key Features of Markdown Online</h3>
+        <ul>
+          <li><strong>Markdown Online Preview</strong>: See your markdown rendered in real-time as you type</li>
+          <li><strong>Markdown to PDF</strong>: Export your documents to PDF with one click</li>
+          <li><strong>Markdown to Word</strong>: Convert markdown to .docx format instantly</li>
+          <li><strong>Markdown to HTML</strong>: Generate clean HTML from your markdown content</li>
+          <li><strong>Markdown to Image</strong>: Export as JPG or PNG for easy sharing</li>
+          <li><strong>Markdown Syntax</strong>: Full support for tables, code highlighting, task lists, and more</li>
+          <li><strong>Multi-language</strong>: Interface available in English, Chinese, Japanese, and Korean</li>
+        </ul>
+
+        <h3>Markdown Syntax Support</h3>
+        <p>
+          Our editor supports all standard <strong>markdown syntax</strong> including headers, lists, links, images, 
+          <strong>markdown tables</strong>, code blocks with syntax highlighting, <strong>markdown checklist</strong> 
+          (task lists), blockquotes, and more.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

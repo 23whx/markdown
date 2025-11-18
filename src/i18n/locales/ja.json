@@ -1,0 +1,87 @@
+{
+  "site": {
+    "title": "Markdown オンラインエディタ & プレビュー | Markdown を PDF/Word/HTML/画像に変換",
+    "description": "Markdown Online は、ログイン不要の高速で安全な Markdown エディタです。オンラインで Markdown を編集し、HTML、PDF、JPG/PNG、Word にエクスポートできます。完全にブラウザ内で動作します。",
+    "keywords": "markdown オンラインプレビュー, markdown エディタ, markdown pdf 変換, markdown word 変換, markdown html 変換"
+  },
+  "nav": {
+    "home": "ホーム",
+    "preview": "ライブプレビュー",
+    "toPdf": "PDF に変換",
+    "toWord": "Word に変換",
+    "toImage": "画像に変換",
+    "docs": "ドキュメント",
+    "language": "言語"
+  },
+  "hero": {
+    "title": "Markdown オンラインエディタ & プレビュー",
+    "subtitle": "Markdown を PDF、Word、HTML、画像に変換",
+    "description": "無料の Markdown オンラインエディタ。ログイン不要、完全にクライアント側で動作、安全で高速。",
+    "cta": "編集を開始"
+  },
+  "features": {
+    "title": "機能",
+    "livePreview": {
+      "title": "Markdown ライブプレビュー",
+      "description": "シンタックスハイライト、テーブル、タスクリストなどを含むリアルタイムプレビュー。"
+    },
+    "toPdf": {
+      "title": "Markdown を PDF に変換",
+      "description": "カスタマイズ可能なスタイルで Markdown ドキュメントを PDF にエクスポート。"
+    },
+    "toWord": {
+      "title": "Markdown を Word に変換",
+      "description": "ワンクリックで Markdown を Word ドキュメント (.docx) に変換。"
+    },
+    "toHtml": {
+      "title": "Markdown を HTML に変換",
+      "description": "Markdown コンテンツからクリーンな HTML を生成。"
+    },
+    "toImage": {
+      "title": "Markdown を画像に変換",
+      "description": "Markdown を JPG/PNG 画像としてエクスポートして共有。"
+    },
+    "noLogin": {
+      "title": "ログイン不要",
+      "description": "完全なフロントエンドアプリケーション。データはブラウザに保存されます。"
+    },
+    "multiLanguage": {
+      "title": "多言語対応",
+      "description": "英語、中国語、日本語、韓国語に対応。"
+    },
+    "syntax": {
+      "title": "Markdown 構文",
+      "description": "標準および拡張 Markdown 構文を完全サポート。"
+    }
+  },
+  "editor": {
+    "placeholder": "ここに Markdown を入力してください...",
+    "wordCount": "単語数",
+    "charCount": "文字数",
+    "readingTime": "分で読める",
+    "export": "エクスポート",
+    "download": "ダウンロード",
+    "copy": "コピー",
+    "clear": "クリア",
+    "template": "テンプレート",
+    "darkMode": "ダークモード",
+    "lightMode": "ライトモード"
+  },
+  "export": {
+    "title": "エクスポートオプション",
+    "html": "HTML としてエクスポート",
+    "pdf": "PDF としてエクスポート",
+    "word": "Word としてエクスポート",
+    "jpg": "JPG としてエクスポート",
+    "png": "PNG としてエクスポート",
+    "success": "エクスポートに成功しました！",
+    "error": "エクスポートに失敗しました。もう一度お試しください。"
+  },
+  "footer": {
+    "copyright": "© Markdown Online",
+    "contact": "お問い合わせ",
+    "privacy": "プライバシー",
+    "about": "について"
+  }
+}
+

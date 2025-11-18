@@ -1,0 +1,87 @@
+{
+  "site": {
+    "title": "Online Markdown Editor & Live Preview | Markdown to PDF/Word/HTML/Image",
+    "description": "Markdown Online is a fast, privacy-friendly markdown editor with live preview. Edit markdown online and export to HTML, PDF, JPG/PNG, and Word – no signup, runs fully in your browser.",
+    "keywords": "markdown online preview, markdown editor, markdown to pdf, markdown to word, markdown to html, markdown to image"
+  },
+  "nav": {
+    "home": "Home",
+    "preview": "Live Preview",
+    "toPdf": "To PDF",
+    "toWord": "To Word",
+    "toImage": "To Image",
+    "docs": "Docs",
+    "language": "Language"
+  },
+  "hero": {
+    "title": "Online Markdown Editor & Live Preview",
+    "subtitle": "Markdown to PDF, Word, HTML, Image",
+    "description": "Free online markdown editor with live preview. No login required, fully client-side, secure and fast.",
+    "cta": "Start Editing"
+  },
+  "features": {
+    "title": "Features",
+    "livePreview": {
+      "title": "Markdown Live Preview",
+      "description": "Real-time preview with syntax highlighting, tables, task lists, and more."
+    },
+    "toPdf": {
+      "title": "Markdown to PDF",
+      "description": "Export your markdown documents to PDF with customizable styling."
+    },
+    "toWord": {
+      "title": "Markdown to Word",
+      "description": "Convert markdown to Word documents (.docx) with one click."
+    },
+    "toHtml": {
+      "title": "Markdown to HTML",
+      "description": "Generate clean HTML from your markdown content."
+    },
+    "toImage": {
+      "title": "Markdown to Image",
+      "description": "Export markdown as JPG/PNG images for sharing."
+    },
+    "noLogin": {
+      "title": "No Login Required",
+      "description": "Pure frontend application. Your data stays in your browser."
+    },
+    "multiLanguage": {
+      "title": "Multi-language",
+      "description": "Supports English, Chinese, Japanese, and Korean."
+    },
+    "syntax": {
+      "title": "Markdown Syntax",
+      "description": "Full support for standard and extended markdown syntax."
+    }
+  },
+  "editor": {
+    "placeholder": "Start typing your markdown here...",
+    "wordCount": "Words",
+    "charCount": "Characters",
+    "readingTime": "min read",
+    "export": "Export",
+    "download": "Download",
+    "copy": "Copy",
+    "clear": "Clear",
+    "template": "Template",
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode"
+  },
+  "export": {
+    "title": "Export Options",
+    "html": "Export as HTML",
+    "pdf": "Export as PDF",
+    "word": "Export as Word",
+    "jpg": "Export as JPG",
+    "png": "Export as PNG",
+    "success": "Exported successfully!",
+    "error": "Export failed. Please try again."
+  },
+  "footer": {
+    "copyright": "© Markdown Online",
+    "contact": "Contact",
+    "privacy": "Privacy",
+    "about": "About"
+  }
+}
+

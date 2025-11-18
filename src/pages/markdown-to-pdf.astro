@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import MarkdownEditor from '../components/MarkdownEditor';
+import { useTranslations, defaultLang, buildEditorTranslations } from '../i18n/utils';
+
+const lang = defaultLang;
+const t = useTranslations(lang);
+
+const editorTranslations = buildEditorTranslations(t);
+---
+
+<BaseLayout
+  title="Markdown to PDF - Convert Markdown to PDF Online | Markdown Online"
+  description="Free online Markdown to PDF converter. Convert your Markdown documents to PDF with customizable styling. No login required, runs fully in your browser."
+  keywords="markdown to pdf, convert markdown to pdf, markdown pdf export, online markdown to pdf converter"
+>
+  <section class="py-20 bg-gradient-to-b from-secondary to-white dark:from-gray-800 dark:to-gray-900">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          Markdown to PDF Converter
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
+          Convert your Markdown documents to PDF format with perfect formatting and custom styling
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 bg-white dark:bg-gray-900">
+    <div class="container mx-auto px-4">
+      <MarkdownEditor client:load translations={editorTranslations} />
+    </div>
+  </section>
+
+  <section class="py-20 bg-gray-50 dark:bg-gray-800">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <div class="prose prose-lg dark:prose-invert max-w-none">
+        <h2>How to Convert Markdown to PDF</h2>
+        <p>
+          Converting <strong>Markdown to PDF</strong> with our tool is simple and straightforward:
+        </p>
+        <ol>
+          <li>Type or paste your Markdown content in the editor</li>
+          <li>Preview the rendered output in real-time</li>
+          <li>Click the "Export" button and select "Export as PDF"</li>
+          <li>Download your PDF file instantly</li>
+        </ol>
+
+        <h3>Why Use Our Markdown to PDF Converter?</h3>
+        <ul>
+          <li><strong>Perfect Formatting</strong>: Preserves headings, lists, tables, and code blocks</li>
+          <li><strong>Privacy-Friendly</strong>: No data uploaded to servers, everything runs in your browser</li>
+          <li><strong>No Login Required</strong>: Start using immediately without creating an account</li>
+          <li><strong>Syntax Highlighting</strong>: Code blocks maintain proper syntax highlighting</li>
+          <li><strong>Free Forever</strong>: Completely free with no limitations</li>
+        </ul>
+
+        <h3>Features</h3>
+        <ul>
+          <li>Real-time Markdown preview</li>
+          <li>Support for GitHub Flavored Markdown</li>
+          <li>Tables, task lists, and code highlighting</li>
+          <li>Custom page margins and styling</li>
+          <li>Export to other formats (Word, HTML, Images)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
